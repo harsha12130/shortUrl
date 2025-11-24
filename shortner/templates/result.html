@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Short URL</title>
+    <style>
+        body {
+            background: #f2f2f2;
+            font-family: Arial;
+            text-align: center;
+            padding-top: 100px;
+        }
+
+        .box {
+            background: white;
+            width: 450px;
+            margin: auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #bbb;
+        }
+
+        #shortUrlLink { 
+            font-size: 20px;
+            color: #007bff;
+            user-select: all; 
+            -webkit-user-select: all;
+            -moz-user-select: all;
+            -ms-user-select: all;
+        }
+
+        .button-group button { 
+            padding: 12px 20px;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            margin-top: 15px;
+            margin: 5px; 
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        #shortenAnotherButton {
+            background: #6c757d;
+        }
+        #shortenAnotherButton:hover {
+            background: #5a6268;
+        }
+        
+        #copyButton {
+            background: #28a745; 
+        }
+        #copyButton:hover {
+            background: #1e7e34;
+        }
+        #confirmation-message {
+            color: #28a745;
+            font-weight: bold;
+            margin-top: 10px;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <h2>Your Short URL</h2>
+        <a id="shortUrlLink" href="{{ short_url }}" target="_blank">{{ short_url }}</a> 
+        <div id="confirmation-message">Copied!</div> <div class="button-group">
+            <button id="copyButton" onclick="copyUrl()">Copy URL</button>
+            <button id="shortenAnotherButton" onclick="window.location.href='/'">Shorten Another</button>
+        </div>
+    </div>
+
+    <script>
+        function copyUrl() {
+            const shortUrl = document.getElementById('shortUrlLink').href;
+            navigator.clipboard.writeText(shortUrl).then(() => {
+                const msg = document.getElementById('confirmation-message');
+                msg.style.opacity = 1;
+                setTimeout(() => {
+                    msg.style.opacity = 0;
+                }, 1500);
+
+            }).catch(err => {
+                console.error('Could not copy text: ', err);
+                alert('Failed to copy the URL. Please copy it manually.');
+            });
+        }
+    </script>
+</body>
+</html>
