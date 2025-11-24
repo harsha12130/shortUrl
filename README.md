@@ -6,24 +6,24 @@ Users can submit long URLs and receive a short, shareable link that redirects to
 
 🚀 Features
 -----------
-Shorten any valid URL
-Automatic generation of unique short codes
-Redirect short links to original URLs
-Django-based MVC structure
-Stores URLs in SQLite
-Clean and simple UI 
+Shorten any valid URL<br>
+Automatic generation of unique short codes<br>
+Redirect short links to original URLs<br>
+Django-based MVC structure<br>
+Stores URLs in SQLite<br>
+Clean and simple UI <br>
 
 
 🛠️ Tech Stack
 -------------
-Django==4.2.26
-Python==3.9.6
-HTML 
-CSS
-JS
-SQLite Database (Default Django Database)
+Django==4.2.26<br>
+Python==3.9.6<br>
+HTML <br>
+CSS<br>
+JS<br>
+SQLite Database (Default Django Database)<br>
 
-Deployment Link : https://url.pythonanywhere.com/
+Deployment Link : https://url.pythonanywhere.com/<br>
 <img width="1437" height="531" alt="image" src="https://github.com/user-attachments/assets/bd1dc45f-32c4-4fb2-b410-5aa946b331c0" />
 <img width="1437" height="542" alt="image" src="https://github.com/user-attachments/assets/839f912e-c203-4ca5-b776-d5f9b4676f1c" />
 <img width="1440" height="560" alt="image" src="https://github.com/user-attachments/assets/f3da3ab0-15ef-462f-8835-2f45841a2b6a" />
